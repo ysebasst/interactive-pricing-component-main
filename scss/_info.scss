@@ -1,0 +1,46 @@
+.info {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem 0;
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 9px;
+      height: 8px;
+      background-image: url(../images/icon-check.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-right: 1rem;
+    }
+  }
+  &__button {
+    background-color: var(--DarkDesaturatedBlue);
+    color: var(--LightGrayishBlue);
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+    border: none;
+    cursor: pointer;
+    outline: 0;
+    padding: 0.75rem 3rem;
+    border-radius: 999px;
+    &:hover {
+      color: var(--White);
+    }
+  }
+  @media screen and (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    &__item {
+      justify-content: start;
+    }
+    &__button {
+      margin-bottom: 0;
+    }
+  }
+}

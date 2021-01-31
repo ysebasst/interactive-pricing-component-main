@@ -1,0 +1,49 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  // ### ### ### ### Primary ### ### ### ###
+  // (Full Slider Bar)
+  --SoftCyan: rgb(165, 243, 235);
+  // (Slider Backround)
+  --StrongCyan: rgb(16, 213, 194);
+  // (Discount Background)
+  --LightGrayishRed: rgb(254, 236, 231);
+  // (Discount Text)
+  --LightRed: rgb(255, 140, 102);
+  // (CTA Text)
+  --PaleBlue: rgb(189, 204, 255);
+
+  // ### ### ### ### Neutral ### ### ### ###
+  // (Pricing Component Background)
+  --White: rgb(255, 255, 255);
+  // (Main Background)
+  --VeryPaleBlue: rgb(250, 251, 255);
+  // (Empty Slider Bar)
+  --LightGrayishBlue: rgb(234, 238, 251);
+  // (Toggle Background)
+  --LightGrayishBlue: rgb(205, 215, 238);
+  // (Text)
+  --GrayishBlue: rgb(133, 143, 173);
+  // (Text & CTA Background)
+  --DarkDesaturatedBlue: rgb(41, 51, 86);
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  // background-color: #f1f5fe;
+  background-image: url(../images/bg-pattern.svg);
+  background-repeat: no-repeat;
+  color: var(--GrayishBlue);
+}
+
+.container {
+  max-width: 327px;
+  margin: 0 auto;
+  @media screen and (min-width: 768px) {
+    max-width: 540px;
+  }
+}

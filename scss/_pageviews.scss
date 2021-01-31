@@ -1,0 +1,90 @@
+.pageviews {
+  display: grid;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 1.5rem;
+  &__title {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  &__slider {
+    -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+    background-color: var(--LightGrayishBlue); /* Otherwise white in Chrome */
+    width: 100%; /* Specific width is required for Firefox. */
+    height: 8px;
+    border-radius: 8px;
+    background-image: linear-gradient(
+      to right,
+      var(--SoftCyan) calc(var(--value) * 1%),
+      var(--LightGrayishBlue) 0
+    );
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      background-color: var(--StrongCyan);
+      background-image: url(../images/icon-slider.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      cursor: pointer;
+      margin-top: 0px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+      box-shadow: 0 20px 20px var(--SoftCyan);
+      transition: filter 0.4s;
+      &:hover {
+        filter: brightness(1.125);
+      }
+      &:active {
+        filter: brightness(0.875);
+      }
+    }
+    /* All the same stuff for Firefox */
+    &::-moz-range-thumb {
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      background-color: var(--StrongCyan);
+      cursor: pointer;
+    }
+    /* All the same stuff for IE */
+    &::-ms-thumb {
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      background-color: var(--StrongCyan);
+      cursor: pointer;
+    }
+    &:focus {
+      outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+    }
+    &::-ms-track {
+      width: 100%;
+      cursor: pointer;
+      /* Hides the slider so custom styles can be added */
+      background: transparent;
+      border-color: transparent;
+      color: transparent;
+    }
+  }
+  &__price {
+    span {
+      color: var(--DarkDesaturatedBlue);
+      font-size: 2rem;
+      font-weight: 800;
+      &::before {
+        content: "$";
+      }
+    }
+  }
+  @media screen and (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    &__slider {
+      grid-column: 1 / span 2;
+    }
+    &__price {
+      grid-row: 1;
+      grid-column: 2;
+    }
+  }
+}

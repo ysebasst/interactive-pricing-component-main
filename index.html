@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- displays site properly based on user's device -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- FAVICON -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- TITLE -->
+    <title>Frontend Mentor | Interactive pricing component</title>
+  </head>
+  <body>
+    <main class="main">
+      <div class="container">
+        <section class="description">
+          <h1 class="description__title">Simple, traffic-based pricing</h1>
+          <p class="description__text">
+            <span>Sign-up for our 30-day trial.</span>
+            <span>No credit card required.</span>
+          </p>
+        </section>
+
+        <section class="pricing">
+          <div class="pageviews">
+            <h2 class="pageviews__title">100k Pageviews</h2>
+            <input class="pageviews__slider" type="range" id="slider"  min="0" max="100" step="1" value="50"/>
+            <p class="pageviews__price"><span id="price">16.00</span> /month</p>
+          </div>
+  
+          <div class="billing">
+            <p class="billing__monthly">Monthly Billing</p>
+            <div class="billing__button" role="button">
+              <span></span>
+            </div>
+            <p class="billing__yearly">Yearly Billing <span class="billing__discount">25% <span>discount</span></span></p>
+          </div>
+  
+          <div class="info">
+            <div class="info__items">
+              <p class="info__item">Unlimited websites</p>
+              <p class="info__item">100% data ownership</p>
+              <p class="info__item">Email reports</p>
+            </div>
+            <button class="info__button">Start my trial</button>
+          </div>
+        </div>
+        </section>
+    </main>
+
+    <div class="attribution">
+      Challenge by
+      <a
+        href="https://www.frontendmentor.io/challenges/interactive-pricing-component-t0m8PIyY8"
+        target="_blank"
+      >
+        Frontend Mentor </a
+      >. Coded by <a href="https://github.com/ysebasst">Sebastian Sierra</a>.
+    </div>
+    <script src="js/app.js"></script>
+  </body>
+</html>
